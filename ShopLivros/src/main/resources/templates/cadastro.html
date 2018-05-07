@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta charset="UTF-8">
+<title>Cadastro</title>
+</head>
+<body>
+<form id="form-1" action="/update" method="post">
+		<label for="input-1">Input:</label>
+		Nome: <input type="text" id="input-1" th:field="*{edit.nome}" name="nome"/>
+		Email: <input id="input-1" th:field="*{edit.email}" name="email" placeholder="Email" type="text"/>
+		Login: <input id="input-1" th:field="*{edit.login}" name="login" placeholder="Login" type="text"/>
+		<input type="hidden" th:value="${edit.id}" />
+		<input type="submit" value="Salvar" id="button-1"/>
+	</form>
+</body>
+</html>
