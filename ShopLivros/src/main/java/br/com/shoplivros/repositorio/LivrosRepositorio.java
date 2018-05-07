@@ -8,4 +8,6 @@ import br.com.shoplivros.modelo.Livros;
 @Repository
 public interface LivrosRepositorio extends CrudRepository<Livros, Long>{
 
+	Livros findById(long id);
+
 }

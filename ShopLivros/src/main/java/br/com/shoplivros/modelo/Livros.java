@@ -24,7 +24,7 @@ public class Livros {
 	@Column(name="autor")
 	private String autor;
 	
-	@Column(name="anoLancamento")
+	@Column(name="ano_lancamento")
 	@DateTimeFormat(pattern="dd/MM/yyyy") 
 	private int anoLancamento;
 

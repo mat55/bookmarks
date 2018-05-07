@@ -38,21 +38,15 @@ public class LivrosController {
 		return livros;
 	}
 	
-	@GetMapping("/edit/{id}")
-	public String edit(@RequestBody @PathVariable("id") long id) {
-		lr.findById(id);
-		return "redirect:/";
-	}
-	
-	@PutMapping("/edit/{id}")
-	public String editar(@RequestBody @RequestParam("id") long id, Livros livros) {
-		lr.findById(id);
+	@PutMapping("/cadastro/{id}")
+	public Livros editar(@RequestBody @PathVariable(value="id") long id, Livros livros) {
+		livros =  lr.findById(id);
 		lr.save(livros);
-		return "redirect:/";
+		return livros;
 	}
 
 	@DeleteMapping()
-	public Livros delete(@RequestBody @RequestParam("id") long id, Livros livros) {
+	public Livros delete(@RequestBody Livros livros) {
 		lr.delete(livros);
 		return livros;
 	}
