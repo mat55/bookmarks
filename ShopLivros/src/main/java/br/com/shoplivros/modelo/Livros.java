@@ -1,22 +1,35 @@
 package br.com.shoplivros.modelo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
+@Table(name="livros")
 public class Livros {
 
 	private Long id;
-	@NotNull
+
+	@NotBlank
+	@Column(name="titulo")
 	private String titulo;
-	@NotNull
+
+	@NotBlank
+	@Column(name="autor")
 	private String autor;
-	@NotNull
+	
+	@Column(name="anoLancamento")
+	@DateTimeFormat(pattern="dd/MM/yyyy") 
 	private int anoLancamento;
-	@NotNull
+
+	@NotBlank
+	@Column(name="categoria")
 	private String categoria;
 	
 	@Id

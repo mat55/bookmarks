@@ -28,8 +28,11 @@ public class LivrosController {
 		Iterable<Livros> lista = lr.findAll();
 		return lista;
 	}
-	
-	@PostMapping()
+	@GetMapping("/cadastro")
+	public String cadastro() {
+		return "cadastro";
+	}
+	@PostMapping("/cadastro")
 	public Livros cadastrar(@RequestBody @Valid Livros livros) {
 		livros = lr.save(livros);
 		return livros;
