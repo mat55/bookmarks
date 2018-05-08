@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1" />
+	<title>Insert title here</title>
+</head>
+<body>
+<p>&lt;!DOCTYPE html&gt;<br />
+&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;<br />
+&nbsp;&nbsp; xmlns:sec=&quot;http://www.thymeleaf.org/thymeleaf-extras-springsecurity4&quot;&gt;<br />
+&lt;head&gt;<br />
+&lt;meta charset=&quot;UTF-8&quot;&gt;<br />
+&lt;title&gt;Cadastro&lt;/title&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;form id=&quot;form-1&quot; action=&quot;/update&quot; method=&quot;post&quot;&gt;<br />
+&nbsp;&nbsp;&lt;label for=&quot;input-1&quot;&gt;Input:&lt;/label&gt;<br />
+&nbsp;Titulo: &lt;input type=&quot;text&quot; id=&quot;input-1&quot; th:field=&quot;*{edit.titulo}&quot; name=&quot;titulo&quot;/&gt;</p>
+
+<p>&nbsp;&nbsp;Diretor: &lt;input id=&quot;input-1&quot; th:field=&quot;*{edit.diretor}&quot; name=&quot;diretor&quot; placeholder=&quot;diretor&quot; type=&quot;text&quot;/&gt;<br />
+&nbsp;&nbsp;AnoLan&ccedil;amento: &lt;input id=&quot;input-1&quot; th:field=&quot;*{edit.anolancamento}&quot; name=&quot;anolancamento&quot; placeholder=&quot;anolancamento&quot; type=&quot;text&quot;/&gt;<br />
+&nbsp;&nbsp;&lt;input type=&quot;hidden&quot; th:value=&quot;${edit.id}&quot; /&gt;<br />
+&nbsp;&nbsp;&lt;input type=&quot;submit&quot; value=&quot;Salvar&quot; id=&quot;button-1&quot;/&gt;<br />
+&nbsp;&lt;/form&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+</body>
+</html>
